@@ -3,10 +3,13 @@
     Just standard hex key (parametric) with no handle; 
 */
 
-radius = 10; // radius in mm
 
-h = 40; // height of hex
-
-
+module Hex(
+				radius // radius in mm
+				, h // height of hex
+		 ){
 cylinder ( r= radius, h =h, $fn = 6 ) ;
+}
+
+Hex(radius = 5,h  = 25);
 
