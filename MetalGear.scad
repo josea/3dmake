@@ -13,7 +13,7 @@ module Gear (
 			, hollow_shaft // indicates if the shaft is solid or if it a holow
 			, ringr // the radius of the ring that holds the tooth together
 ) {
-c = 2*pi *shaft; // circumference of shaft
+c = 2*pi *ringr; // circumference of ring
 
 if ( hollow_shaft == 0 )  
     cylinder ( h= h, r= shaft , $fn= 50 );
@@ -29,10 +29,10 @@ for ( i= [0: (nt -1)] ){
 	
 	//translate ( [-sin( a)* shaft,cos(a) *shaft,0])
 	rotate( [0,0, i*360/nt]) 
-//	translate ( [-c/(nt*2)/2, shaft,0])
-//	cube (size=[c/(nt*2),gr-shaft, h]);
-	translate ( [-td/2, shaft,0])
-	cube (size=[td,gr-shaft, h]);
+	translate ( [-c/(nt*2)/2, shaft,0])
+	cube (size=[c/(nt*2),gr-shaft, h]);
+/*	translate ( [-td/2, shaft,0])
+	cube (size=[td,gr-shaft, h]);*/
 }
 }
 
