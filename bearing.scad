@@ -37,6 +37,8 @@ echo(helix_angle);
 
 phi=$t*360/m;
 
+
+//side handle
 translate ([29,7.5,4.2])
 rotate ([90,90,0])
 {	//difference ( ){
@@ -51,7 +53,7 @@ rotate ([90,90,0])
 //}
 		
 }
-
+//side handle
 translate ([-29,7.5,4.2])
 rotate ([90,90,0])
 {
