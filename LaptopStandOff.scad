@@ -46,19 +46,31 @@ cylinder ( r=10/2, h =10);
 
 
 module roundedCubeIrregular2(){
-minkowski(){
+minkowski()
+{
+intersection()
+{
 intersection ()
 {
+// irregular square
 connect_squares ([ [0,10,0],[0,0,0],  [0,0,15], [0,10,15],
 			  [20,10,0], [20,0,0], [20,0,10], [20,10,10]]);
 
+// intersects to cylinder to have a rounded wall
 translate ( [20,10,5])
 rotate([90,0,0])
 cylinder ( r=20, h =5);
 }
+// intersects to cylinder to have a rounded wall
+translate ( [5,10,5])
+rotate([90,0,0])
+cylinder ( r= 15, h =5 ); 
+}
+// minkowski cylinder to have a rounded edges
 translate ( [0,10,15/2])
 rotate([90,0,0])
 cylinder ( r=15/2, h =10);
+
 }
 /*hull(){
 translate ( [0,10,15/2])
@@ -70,7 +82,7 @@ cylinder ( r=10/2, h =10);
 }*/
 }
 
-//roundedCubeIrregular2();
+//rotate ([90,0,0]) roundedCubeIrregular2();
 //polyhedron ( points = [[ 0,0,0], [0,10,0], [0,0,10], [0,10,10]],
 //		 triangles = [[0,1,2], [1,2,3]] );
 
