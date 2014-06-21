@@ -89,16 +89,43 @@ cylinder ( r=10/2, h =10);
 
 
 module stand(){
+union(){
+difference () 
+{
+difference(){
 difference (){
 resize ( [55, 30,  40] )
 roundedCubeIrregular2();
-translate ([1.5,-5,2.5])
-resize ( [50, 40,  35] )
+// adds bolder edges
+translate ([2.5,-5,5])
+resize ( [45, 40,  30] )
 roundedCubeIrregular2();
+}
+// takes out the mass in the body, so the walls in the middle are
+// thinner.
+translate ([1.5,5,2.5])
+resize ( [50, 25,  35] )
+roundedCubeIrregular2();
+}
+
+translate ( [5,25,35])
+scale ( 2 )
+rotate([90,11,0])
+connect_squares ([ [0,3,0],[2,0,0+2],  [2,0,6-2], [0,3,6],
+			  [6,3,0], [4,0,0+2], [4,0,6-2], [6,3,6]]);
+
+
+}
+translate ( [5,15,37])
+//scale ( 2 )
+rotate([0,11,0])
+cube ( [16,16 ,1]);
 }
 }
 
 $fn = 140;
+
+
 
 rotate ([90,0,0])
 stand();
