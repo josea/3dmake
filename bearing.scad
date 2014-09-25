@@ -1,3 +1,8 @@
+/** Based on Emmett's design from: http://www.thingiverse.com/thing:53451
+
+	Modified by JoseA to have some lateral handles
+
+*/
 use <Hex.scad>
 // Planetary gear bearing (customizable)
 
