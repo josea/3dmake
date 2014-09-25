@@ -1,5 +1,7 @@
 /** Copied from Emmett's design from: http://www.thingiverse.com/thing:53451
 
+	License: http://creativecommons.org/licenses/by-sa/3.0/
+
 	Modified by JoseA to have some lateral handles.
 
 */
