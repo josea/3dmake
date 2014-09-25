@@ -1,6 +1,6 @@
-/** Based on Emmett's design from: http://www.thingiverse.com/thing:53451
+/** Copied from Emmett's design from: http://www.thingiverse.com/thing:53451
 
-	Modified by JoseA to have some lateral handles
+	Modified by JoseA to have some lateral handles.
 
 */
 use <Hex.scad>
